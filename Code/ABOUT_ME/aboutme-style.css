@@ -1,0 +1,109 @@
+/*MAIN*/
+div#about-me.container{
+    min-width: 320px;
+    max-width: 1400px;
+    padding-bottom: 300px;
+    padding-right: 20px;
+    padding-left: 25px;
+}
+
+.self-presentation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 150px;
+    padding-right: 20px;
+    padding-left: 20px;
+    gap: 200px;
+}
+
+.self-content-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+}
+
+#start{
+    justify-content: start;
+}
+
+#end{
+    justify-content: end;
+}
+
+.self-presentation-text-Box{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 45%;
+}
+
+
+/*TEXT*/
+a.text{
+    text-decoration: none;
+}
+
+.font-header{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+p#date{
+    font-weight: 600;
+}
+
+p#stroke{
+    font-size: 24px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-contrast-color);
+}
+
+/*MEDIA*/
+@media screen and (min-width: 998px) {
+    
+}
+
+@media screen and (max-width: 998px){
+  
+}
+
+@media screen and (max-width: 768px) {
+    div#about-me.container{
+        max-width: 85%;
+        width: 100%;
+    }
+
+    #start{
+        justify-content: start;
+    }
+
+    #end{
+        justify-content: start;
+    }
+
+    .self-presentation-text-Box{
+        width: 90%;
+    }
+
+    .self-presentation{
+        padding-top: 100px;
+        gap: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) and (min-width: 340px) {
+    .self-presentation-text-Box{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .self-presentation{
+        padding-top: 80px;
+        gap: 80px;
+    }
+}
+
