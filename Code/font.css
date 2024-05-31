@@ -29,9 +29,38 @@ INTER */
     font-weight: bold;
 }
 
+.font-menu{
+    font-size: 18px;
+}
+
+.menu-head{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.center-align{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 h1{
     font-size: 64px;
     font-weight: 400;
+}
+
+#menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.hover-font{
+    font-size: 2em;
+    color: #e3e3e3;
+    padding: 10%;
 }
 
 /*KOREAN FONT*/
@@ -48,6 +77,14 @@ h1{
 
     .font-brand-name{
         font-size: 32px;
+    }
+
+    #menu{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 30px;
+        font-weight: 400;
     }
 }
 
@@ -67,6 +104,11 @@ h1{
     h1{
         font-size: 48px;
     }
+
+    #menu{
+        font-size: 24px;
+        font-weight: 400;
+    }
 }
 
 @media screen and (max-width: 576px) and (min-width: 340px) {
@@ -84,5 +126,12 @@ h1{
 
     h1{
         font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 460px){
+    #menu{
+        font-size: 20px;
+        font-weight: 400;
     }
 }
