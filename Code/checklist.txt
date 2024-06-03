@@ -16,9 +16,9 @@
 
 Лабараторная работа №7
 - пройти тест✅
-- использовать Grid❌
+- использовать Grid✅
 - кликабельные картинки ❌
-- сверстать макет maket2[Макеты\maket2.png]❌
+- сверстать макет maket2[Макеты\maket2.png]✅
 
 Лабараторная работа №8
 - добавить 2-3 эффекта ❌ (transition: opacity✅, transition: width✅, transition: rotate✅ transform❌)
@@ -26,7 +26,7 @@
 - добавить 1-2 SVG объекта✅
 
 Лабараторная работа №9
-- JS автотекст https://thecode.media/web-presentation/❌
+- JS автотекст https://thecode.media/web-presentation/✅
 - JS калькулятор (с действиями) https://thecode.media/calc-js/❌
 - JS калькулятор (только интерфейс) https://thecode.media/calc-js/❌
 
