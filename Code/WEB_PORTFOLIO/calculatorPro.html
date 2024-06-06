@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Простой калькулятор</title>
+  <!-- подключаем стили -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- добавляем элементы -->
+<div class="container">
+    <!-- контейнер калькулятора -->
+    <fieldset id="container">
+      <!-- общая форма -->
+      <form name="calculator">
+
+        <!-- элемент дисплея калькулятора -->
+        <input id="display" type="text" name="display" readonly>
+
+        <!-- кнопки верхнего ряда -->
+        <!-- кнопка с цифрой 7 -->
+        <input class="button digits" type="button" value="7">
+        <!-- кнопка с цифрой 8 -->
+        <input class="button digits" type="button" value="8">
+        <!-- кнопка с цифрой 9 -->
+        <input class="button digits" type="button" value="9">
+        <!-- кнопка сложения -->
+        <input class="button mathButtons" type="button" value="+">
+        <br />
+        <!-- кнопки среднего ряда -->
+        <!-- кнопка с цифрой 4 -->
+        <input class="button digits" type="button" value="4">
+        <!-- кнопка с цифрой 5 -->
+        <input class="button digits" type="button" value="5">
+        <!-- кнопка с цифрой 6 -->
+        <input class="button digits" type="button" value="6">
+        <!-- кнопка вычитания -->
+        <input class="button mathButtons" type="button" value="-">
+        <br />
+        <!-- кнопки нижнего ряда -->
+        <!-- кнопка с цифрой 1 -->
+        <input class="button digits" type="button" value="1">
+        <!-- кнопка с цифрой 2 -->
+        <input class="button digits" type="button" value="2">
+        <!-- кнопка с цифрой 3 -->
+        <input class="button digits" type="button" value="3">
+        <!-- кнопка умножения -->
+        <input class="button mathButtons" type="button" value="*">
+        <br />
+        <!-- кнопки подвала -->
+        <!-- кнопка сброса -->
+        <input id="clearButton" class="button" type="button" value="C">
+        <!-- кнопка с цифрой 0 -->
+        <input class="button digits" type="button" value="0">
+        <!-- кнопка математического оператора «равно» -->
+        <input id="equalButton" class="button mathButtons" type="button" value="=">
+        <!-- кнопка деления / -->
+        <input class="button mathButtons" type="button" value="/">
+      </form>
+    </fieldset>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const display = document.getElementById("display");
+    const digits = document.querySelectorAll(".digits");
+    const mathButtons = document.querySelectorAll(".mathButtons");
+    const clearButton = document.getElementById("clearButton");
+    const equalButton = document.getElementById("equalButton");
+
+    let currentInput = "";
+    let currentOperator = "";
+    let result = 0;
+    let lastInputIsOperator = false;
+
+    // Функция для добавления символа на дисплей
+    function addToDisplay(value) {
+      display.value += value;
+    }
+
+    // Функция для очистки дисплея
+    function clearDisplay() {
+      display.value = "";
+    }
+
+    // Функция для выполнения операции
+    function calculate() {
+      const inputValue = parseFloat(currentInput);
+      if (!isNaN(inputValue)) {
+        switch (currentOperator) {
+          case "+":
+            result += inputValue;
+            break;
+          case "-":
+            result -= inputValue;
+            break;
+          case "*":
+            result *= inputValue;
+            break;
+          case "/":
+            if (inputValue !== 0) {
+              result /= inputValue;
+            } else {
+              result = "Error";
+            }
+            break;
+          default:
+            result = inputValue;
+        }
+      } else {
+        result = "Error";
+      }
+      display.value = result;
+      currentInput = result.toString();
+      lastInputIsOperator = false;
+    }
+
+    // Обработчик нажатия на цифровую кнопку
+    digits.forEach(function (digit) {
+      digit.addEventListener("click", function () {
+        if (lastInputIsOperator) {
+          clearDisplay();
+          lastInputIsOperator = false;
+        }
+        addToDisplay(digit.value);
+        currentInput += digit.value;
+      });
+    });
+
+    // Обработчик нажатия на кнопку оператора
+    mathButtons.forEach(function (operator) {
+      operator.addEventListener("click", function () {
+        if (!lastInputIsOperator) {
+          calculate();
+          currentOperator = operator.value;
+          currentInput = "";
+          lastInputIsOperator = true;
+        } else {
+          currentOperator = operator.value;
+        }
+      });
+    });
+
+    // Обработчик нажатия на кнопку равно
+    equalButton.addEventListener("click", function () {
+      if (!lastInputIsOperator) {
+        calculate();
+        currentOperator = "";
+        lastInputIsOperator = true;
+      }
+    });
+
+    // Обработчик нажатия на кнопку сброса
+    clearButton.addEventListener("click", function () {
+      clearDisplay();
+      currentInput = "";
+      currentOperator = "";
+      result = 0;
+      lastInputIsOperator = false;
+    });
+  });
+</script>
+</body>
+</html>

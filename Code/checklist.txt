@@ -17,23 +17,23 @@
 Лабараторная работа №7
 - пройти тест✅
 - использовать Grid✅
-- кликабельные картинки ❌
+- кликабельные картинки ✅
 - сверстать макет maket2[Макеты\maket2.png]✅
 
 Лабараторная работа №8
-- добавить 2-3 эффекта ❌ (transition: opacity✅, transition: width✅, transition: rotate✅ transform❌)
+- добавить 2-3 эффекта ✅ (transition: opacity✅, transition: width✅, transition: rotate✅ transform❌)
 - добавить 1-2 анимации❌ (keyframes ❌)
 - добавить 1-2 SVG объекта✅
 
 Лабараторная работа №9
 - JS автотекст https://thecode.media/web-presentation/✅
-- JS калькулятор (с действиями) https://thecode.media/calc-js/❌
-- JS калькулятор (только интерфейс) https://thecode.media/calc-js/❌
+- JS калькулятор (с действиями) https://thecode.media/calc-js/✅
+- JS калькулятор (только интерфейс) https://thecode.media/calc-js/✅
 
 Лабараторная работа №10
-- добавить интерактивную карту (Яндекс) https://thecode.media/maps/❌
-- змейка https://thecode.media/snake-js/❌
-- карусель фото https://html5css.ru/howto/howto_js_slideshow.php❌
+- добавить интерактивную карту (Яндекс) https://thecode.media/maps/✅
+- змейка https://thecode.media/snake-js/✅
+- карусель фото https://html5css.ru/howto/howto_js_slideshow.php✅
 
 Лабараторная работа №11
 - навигационное выпадающее меню (например, вертикальное, аккордеон, вкладки,  https://html5css.ru/howto/howto_js_navbar_hide_scroll.php);

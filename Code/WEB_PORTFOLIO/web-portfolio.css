@@ -82,3 +82,15 @@ body{
     grid-row: 2;
     height: 30vh;
 }
+
+img{
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
